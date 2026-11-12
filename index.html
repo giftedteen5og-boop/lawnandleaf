@@ -10,14 +10,13 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
     <link rel="stylesheet" href="style.css" />
     
-    <!-- Fallback if JS fails -->
     <noscript>
         <style>
             .fade-in { opacity: 1 !important; transform: none !important; }
@@ -28,9 +27,9 @@
 
     <div id="toast"></div>
 
-    <header>
-        <div class="container">
-            <!-- LOGO -->
+    <!-- FLOATING PILL HEADER -->
+    <header class="floating-header">
+        <div class="nav-container">
             <div class="logo">
                 <img src="images/logo.png" alt="Lawn and Leaf Gardening Services Logo" class="header-logo" />
             </div>
@@ -42,7 +41,7 @@
                     <li><a href="#gallery">Our Work</a></li>
                     <li><a href="#calculator">Estimate</a></li>
                     <li><a href="#faq">FAQ</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#contact" class="nav-cta">Contact</a></li>
                 </ul>
             </nav>
             <div class="menu-toggle" id="mobile-menu">
@@ -53,6 +52,9 @@
 
     <!-- Hero Section -->
     <section id="hero">
+        <!-- Animated Background -->
+        <div class="hero-bg"></div>
+        
         <div class="hero-overlay"></div>
         <div class="container">
             <div class="hero-content">
@@ -70,9 +72,9 @@
     <section id="services">
         <div class="container">
             <h2 class="section-title">Our <span>Services</span></h2>
-            <!-- Added note about 21 services -->
-            <p class="section-subtitle">Here are our most popular services. <strong>We actually offer over 21 different services!</strong> If you don't see what you need, <a href="#contact" style="color: var(--primary-gold); font-weight: bold; text-decoration: underline;">contact us</a> to see how we can help.</p>
+            <p class="section-subtitle">Here are our most popular services. <strong>We actually offer over 21 different services!</strong> If you don't see what you need, <a href="#contact" style="color: var(--brand-gold); font-weight: bold; text-decoration: underline;">contact us</a> to see how we can help.</p>
             
+            <!-- The 6 Main Cards -->
             <div class="service-grid">
                 <div class="service-card fade-in">
                     <i class="fas fa-tree"></i>
@@ -105,6 +107,40 @@
                     <p>Fast and legal removal of construction rubble, bricks, and building waste.</p>
                 </div>
             </div>
+
+            <!-- The "View More" Accordion Box -->
+            <div class="full-services-box fade-in">
+                <button class="toggle-services-btn" id="toggle-services">
+                    View more services <i class="fas fa-chevron-down"></i>
+                </button>
+                
+                <div class="full-services-content" id="full-services-list">
+                    <ul>
+                        <li>Tree Felling & Pruning</li>
+                        <li>Hedge Trimming & Shaping</li>
+                        <li>Alien Vegetation Removal</li>
+                        <li>Water-Wise Garden Design</li>
+                        <li>Irrigation Installation</li>
+                        <li>Borehole & Rainwater Tank Setup</li>
+                        <li>Pond & Water Feature Maintenance</li>
+                        <li>Sod / Turf Installation</li>
+                        <li>Paving & Stepping Stones</li>
+                        <li>Garden Lighting Installation</li>
+                        <li>Holiday Garden Lighting</li>
+                        <li>Lawn Mowing</li>
+                        <li>Spring & Autumn Clean-ups</li>
+                        <li>Garden Waste Removal</li>
+                        <li>Pre-Sale Property Makeovers</li>
+                        <li>Event Setup & Cleanup</li>
+                        <li>Building Rubble Removal</li>
+                        <li>Demolition Cleanup</li>
+                        <li>Site Clearance</li>
+                        <li>Soil & Sand Delivery</li>
+                        <li>Full Garden Revamp</li>
+                    </ul>
+                </div>
+            </div>
+
         </div>
     </section>
 
@@ -276,8 +312,7 @@
     <section id="calculator">
         <div class="container">
             <h2 class="section-title">Instant <span>Estimate</span></h2>
-            <!-- Added note about 21 services here too -->
-            <p class="section-subtitle">Get a ballpark price for our most popular services. <strong>We offer over 21 services in total!</strong> For a custom quote on anything else, <a href="#contact" style="color: var(--primary-gold); font-weight: bold; text-decoration: underline;">contact us here</a>.</p>
+            <p class="section-subtitle">Get a ballpark price for our most popular services. <strong>We offer over 21 services in total!</strong> For a custom quote on anything else, <a href="#contact" style="color: var(--brand-gold); font-weight: bold; text-decoration: underline;">contact us here</a>.</p>
 
             <div class="calculator-wrapper fade-in">
                 <div class="calc-form">
@@ -334,7 +369,7 @@
                 <div class="faq-item fade-in">
                     <button class="faq-question">
                         Do you handle water restrictions?
-                        <i class="fas fa-chevron-down"></i>
+                        <i class="fas fa-plus"></i>
                     </button>
                     <div class="faq-answer">
                         <p>Yes. Municipal water restrictions make it hard to maintain a garden. We use water-wise design, drip irrigation, boreholes, and mulch layering to ensure your garden thrives on minimal water.</p>
@@ -343,7 +378,7 @@
                 <div class="faq-item fade-in">
                     <button class="faq-question">
                         I don't have time for maintenance. Can you help?
-                        <i class="fas fa-chevron-down"></i>
+                        <i class="fas fa-plus"></i>
                     </button>
                     <div class="faq-answer">
                         <p>Absolutely. We offer affordable monthly and weekly maintenance plans. We handle the mowing, pruning, and weeding so you can focus on what matters.</p>
@@ -352,7 +387,7 @@
                 <div class="faq-item fade-in">
                     <button class="faq-question">
                         Are you compliant for HOA & Estates?
-                        <i class="fas fa-chevron-down"></i>
+                        <i class="fas fa-plus"></i>
                     </button>
                     <div class="faq-answer">
                         <p>Yes. We provide reliable commercial contracts for estates and HOAs, ensuring safety compliance and reporting to keep your community beautiful and fine-free.</p>
@@ -361,7 +396,7 @@
                 <div class="faq-item fade-in">
                     <button class="faq-question">
                         What areas do you service?
-                        <i class="fas fa-chevron-down"></i>
+                        <i class="fas fa-plus"></i>
                     </button>
                     <div class="faq-answer">
                         <p>We're based in <strong>Ennerdale</strong> with an office in <strong>Lenasia</strong>, serving the entire Greater Gauteng region — including Johannesburg South, Soweto, Sedibeng, the <strong>Vaal Triangle</strong>, and surrounding areas.</p>
@@ -370,7 +405,7 @@
                 <div class="faq-item fade-in">
                     <button class="faq-question">
                         Do you do community volunteer work?
-                        <i class="fas fa-chevron-down"></i>
+                        <i class="fas fa-plus"></i>
                     </button>
                     <div class="faq-answer">
                         <p>Yes! We regularly volunteer our time for free garden clean-ups at churches, schools, and community centres. If you have a community project you'd like our help with, <a href="#contact">get in touch</a>.</p>
@@ -379,7 +414,7 @@
                 <div class="faq-item fade-in">
                     <button class="faq-question">
                         Are you insured?
-                        <i class="fas fa-chevron-down"></i>
+                        <i class="fas fa-plus"></i>
                     </button>
                     <div class="faq-answer">
                         <p>Yes, Lawn and Leaf is fully insured and licensed. We also comply with all South African labor laws and safety regulations.</p>

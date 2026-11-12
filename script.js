@@ -1,6 +1,5 @@
 // ============================================================
-// G&M by Gift Moopelwa — Main Script
-// Ennerdale • Lenasia • Greater Gauteng • Vaal Triangle
+// Lawn and Leaf — Main Script
 // ============================================================
 
 // ============ 1. MOBILE MENU ============
@@ -54,20 +53,7 @@ if (messageField && charCount) {
     });
 }
 
-// ============ 6. PROMO BANNER ============
-const promoBanner = document.getElementById('promo-banner');
-const closePromo = document.getElementById('close-promo');
-if (promoBanner && closePromo) {
-    if (localStorage.getItem('gm_promo_closed') === 'true') {
-        promoBanner.classList.add('hidden');
-    }
-    closePromo.addEventListener('click', () => {
-        promoBanner.classList.add('hidden');
-        localStorage.setItem('gm_promo_closed', 'true');
-    });
-}
-
-// ============ 7. FAQ ACCORDION ============
+// ============ 6. FAQ ACCORDION ============
 document.querySelectorAll('.faq-question').forEach(btn => {
     btn.addEventListener('click', () => {
         const item = btn.parentElement;
@@ -76,6 +62,17 @@ document.querySelectorAll('.faq-question').forEach(btn => {
         if (!isOpen) item.classList.add('open');
     });
 });
+
+// ============ 7. EXPAND FULL SERVICES BOX ============
+const toggleServicesBtn = document.getElementById('toggle-services');
+const fullServicesList = document.getElementById('full-services-list');
+
+if (toggleServicesBtn && fullServicesList) {
+    toggleServicesBtn.addEventListener('click', () => {
+        toggleServicesBtn.classList.toggle('active');
+        fullServicesList.classList.toggle('active');
+    });
+}
 
 // ============ 8. QUOTE CALCULATOR ============
 const calcSize = document.getElementById('calc-size');
@@ -199,4 +196,4 @@ document.addEventListener('keydown', (e) => {
     }
 });
 
-console.log('🌿 G&M by Gift Moopelwa | Ennerdale • Lenasia • Greater Gauteng • Vaal Triangle');
+console.log('🌿 Lawn and Leaf | Ennerdale • Lenasia • Greater Gauteng • Vaal Triangle');
