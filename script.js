@@ -2,19 +2,26 @@
 // Lawn and Leaf — Main Script
 // ============================================================
 
-// ============ 1. MOBILE MENU ============
+// ============ 1. MOBILE MENU TOGGLE ============
 const mobileMenu = document.getElementById('mobile-menu');
 const navbar = document.getElementById('navbar');
+
 if (mobileMenu && navbar) {
-    mobileMenu.addEventListener('click', () => navbar.classList.toggle('active'));
-    // Don't close menu on link click if it's a page reload, but good practice
-    document.querySelectorAll('#navbar ul li a').forEach(link => {
-        link.addEventListener('click', () => navbar.classList.remove('active'));
+    // Toggle menu on hamburger click
+    mobileMenu.addEventListener('click', (e) => {
+        e.stopPropagation(); // Prevents immediate closing
+        navbar.classList.toggle('active');
+    });
+
+    // Close menu when clicking anywhere outside of it
+    document.addEventListener('click', (e) => {
+        if (navbar.classList.contains('active') && !navbar.contains(e.target) && !mobileMenu.contains(e.target)) {
+            navbar.classList.remove('active');
+        }
     });
 }
 
 // ============ 2. ACTIVE PAGE HIGHLIGHT ============
-// Automatically highlights the current page in the navigation
 const currentPath = window.location.pathname.split('/').pop() || 'index.html';
 document.querySelectorAll('#navbar ul li a').forEach(link => {
     const href = link.getAttribute('href');
