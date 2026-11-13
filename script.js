@@ -7,12 +7,23 @@ const mobileMenu = document.getElementById('mobile-menu');
 const navbar = document.getElementById('navbar');
 if (mobileMenu && navbar) {
     mobileMenu.addEventListener('click', () => navbar.classList.toggle('active'));
+    // Don't close menu on link click if it's a page reload, but good practice
     document.querySelectorAll('#navbar ul li a').forEach(link => {
         link.addEventListener('click', () => navbar.classList.remove('active'));
     });
 }
 
-// ============ 2. TOAST NOTIFICATIONS ============
+// ============ 2. ACTIVE PAGE HIGHLIGHT ============
+// Automatically highlights the current page in the navigation
+const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+document.querySelectorAll('#navbar ul li a').forEach(link => {
+    const href = link.getAttribute('href');
+    if (href === currentPath) {
+        link.classList.add('active');
+    }
+});
+
+// ============ 3. TOAST NOTIFICATIONS ============
 function showToast(message, isError = false) {
     const toast = document.getElementById('toast');
     if (!toast) return;
@@ -24,7 +35,7 @@ function showToast(message, isError = false) {
     toast.timeout = setTimeout(() => toast.classList.remove('show'), 4500);
 }
 
-// ============ 3. BACK TO TOP ============
+// ============ 4. BACK TO TOP ============
 const backToTop = document.getElementById('back-to-top');
 if (backToTop) {
     window.addEventListener('scroll', () => {
@@ -33,7 +44,7 @@ if (backToTop) {
     backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 }
 
-// ============ 4. SCROLL REVEAL ============
+// ============ 5. SCROLL REVEAL ============
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) entry.target.classList.add('active');
@@ -41,7 +52,7 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.15 });
 document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
-// ============ 5. CHARACTER COUNTER ============
+// ============ 6. CHARACTER COUNTER ============
 const messageField = document.getElementById('message');
 const charCount = document.getElementById('char-count');
 if (messageField && charCount) {
@@ -53,7 +64,7 @@ if (messageField && charCount) {
     });
 }
 
-// ============ 6. FAQ ACCORDION ============
+// ============ 7. FAQ ACCORDION ============
 document.querySelectorAll('.faq-question').forEach(btn => {
     btn.addEventListener('click', () => {
         const item = btn.parentElement;
@@ -63,7 +74,7 @@ document.querySelectorAll('.faq-question').forEach(btn => {
     });
 });
 
-// ============ 7. EXPAND FULL SERVICES BOX ============
+// ============ 8. EXPAND FULL SERVICES BOX ============
 const toggleServicesBtn = document.getElementById('toggle-services');
 const fullServicesList = document.getElementById('full-services-list');
 
@@ -74,7 +85,7 @@ if (toggleServicesBtn && fullServicesList) {
     });
 }
 
-// ============ 8. QUOTE CALCULATOR ============
+// ============ 9. QUOTE CALCULATOR ============
 const calcSize = document.getElementById('calc-size');
 const calcService = document.getElementById('calc-service');
 const calcFrequency = document.getElementById('calc-frequency');
@@ -108,7 +119,7 @@ if (calcSize) {
     updateEstimate();
 }
 
-// ============ 9. ANIMATED IMPACT STAT COUNTERS ============
+// ============ 10. ANIMATED IMPACT STAT COUNTERS ============
 const impactNumbers = document.querySelectorAll('.impact-number');
 if (impactNumbers.length > 0) {
     const counterObserver = new IntersectionObserver((entries) => {
@@ -134,7 +145,7 @@ if (impactNumbers.length > 0) {
     impactNumbers.forEach(el => counterObserver.observe(el));
 }
 
-// ============ 10. ENHANCED FORM SUBMISSION ============
+// ============ 11. ENHANCED FORM SUBMISSION ============
 const contactForm = document.getElementById('contact-form');
 if (contactForm) {
     contactForm.addEventListener('submit', async (e) => {
@@ -185,15 +196,15 @@ if (contactForm) {
     });
 }
 
-// ============ 11. DYNAMIC YEAR ============
+// ============ 12. DYNAMIC YEAR ============
 const yearSpan = document.getElementById('current-year');
 if (yearSpan) yearSpan.textContent = new Date().getFullYear();
 
-// ============ 12. ESCAPE KEY TO CLOSE MENU ============
+// ============ 13. ESCAPE KEY TO CLOSE MENU ============
 document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && navbar?.classList.contains('active')) {
         navbar.classList.remove('active');
     }
 });
 
-console.log('🌿 Lawn and Leaf | Ennerdale • Lenasia • Greater Gauteng • Vaal Triangle');
+console.log('🌿 Lawn and Leaf | Multi-Page Architecture Loaded');

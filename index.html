@@ -3,78 +3,52 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <title>Lawn and Leaf | Gardening, Landscaping & Site Services in Gauteng</title>
-    <meta name="description" content="Professional water-wise gardening, landscaping, tree felling, rubble removal & site services in Ennerdale, Lenasia, Vaal Triangle & Greater Gauteng. Growing Great Space while uplifting local youth." />
-    
-    <!-- Google Fonts -->
+    <title>Our Services | Lawn and Leaf</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-
     <link rel="stylesheet" href="style.css" />
-    
-    <noscript>
-        <style>
-            .fade-in { opacity: 1 !important; transform: none !important; }
-        </style>
-    </noscript>
 </head>
 <body>
-
     <div id="toast"></div>
 
-    <!-- FLOATING PILL HEADER -->
-    <header class="floating-header">
-        <div class="nav-container">
-            <div class="logo">
-                <img src="images/logo.png" alt="Lawn and Leaf Gardening Services Logo" class="header-logo" />
-            </div>
-            
-            <nav id="navbar">
-                <ul>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#impact">Our Impact</a></li>
-                    <li><a href="#gallery">Our Work</a></li>
-                    <li><a href="#calculator">Estimate</a></li>
-                    <li><a href="#faq">FAQ</a></li>
-                    <li><a href="#contact" class="nav-cta">Contact</a></li>
-                </ul>
-            </nav>
-            <div class="menu-toggle" id="mobile-menu">
-                <i class="fas fa-bars"></i>
+    <header class="site-header">
+        <div class="top-info-bar">
+            <a href="tel:+27692118336"><i class="fas fa-phone-alt"></i> +27 69 211 8336</a>
+            <a href="mailto:lawnandleafgardeningservices@gmail.com"><i class="fas fa-envelope"></i> Email Us</a>
+            <span><i class="fas fa-map-marker-alt"></i> Ennerdale & Lenasia</span>
+            <span><i class="fas fa-clock"></i> Mon–Sat: 07:00 – 17:00</span>
+        </div>
+        <div class="navbar-wrapper">
+            <div class="nav-container">
+                <div class="logo">
+                    <a href="index.html"><img src="images/logo.png" alt="Lawn and Leaf Logo" class="header-logo" /></a>
+                </div>
+                <nav id="navbar">
+                    <ul>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="impact.html">Our Impact</a></li>
+                        <li><a href="gallery.html">Our Work</a></li>
+                        <li><a href="calculator.html">Estimate</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="contact.html" class="nav-cta">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="menu-toggle" id="mobile-menu"><i class="fas fa-bars"></i></div>
             </div>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section id="hero">
-        <!-- Animated Background -->
-        <div class="hero-bg"></div>
-        
-        <div class="hero-overlay"></div>
+    <div class="page-header">
         <div class="container">
-            <div class="hero-content">
-                <h2>Growing <span>Great Space</span></h2>
-                <p>Proudly based in <strong>Ennerdale</strong>. Complete gardening, landscaping, and site services for homes and estates across <strong>Gauteng</strong> and the <strong>Vaal Triangle</strong>.</p>
-                <div class="hero-buttons">
-                    <a href="#contact" class="btn-primary">Get a Free Quote</a>
-                    <a href="#gallery" class="btn-secondary">See Our Work</a>
-                </div>
-            </div>
+            <h1>Our Services</h1>
+            <p>We actually offer over 21 different services! If you don't see what you need, contact us to see how we can help.</p>
         </div>
-    </section>
+    </div>
 
-    <!-- Services Section -->
-    <section id="services">
+    <section id="services" class="section-padding">
         <div class="container">
-            <h2 class="section-title">Our <span>Services</span></h2>
-            <p class="section-subtitle">Here are our most popular services. <strong>We actually offer over 21 different services!</strong> If you don't see what you need, <a href="#contact" style="color: var(--brand-gold); font-weight: bold; text-decoration: underline;">contact us</a> to see how we can help.</p>
-            
-            <!-- The 6 Main Cards -->
             <div class="service-grid">
                 <div class="service-card fade-in">
                     <i class="fas fa-tree"></i>
@@ -108,12 +82,10 @@
                 </div>
             </div>
 
-            <!-- The "View More" Accordion Box -->
             <div class="full-services-box fade-in">
                 <button class="toggle-services-btn" id="toggle-services">
                     View more services <i class="fas fa-chevron-down"></i>
                 </button>
-                
                 <div class="full-services-content" id="full-services-list">
                     <ul>
                         <li>Tree Felling & Pruning</li>
@@ -140,386 +112,6 @@
                     </ul>
                 </div>
             </div>
-
-        </div>
-    </section>
-
-    <!-- Impact Section -->
-    <section id="impact">
-        <div class="container">
-            <div class="impact-header">
-                <div class="impact-badge">
-                    <i class="fas fa-users"></i> Social Impact
-                </div>
-                <h2 class="section-title">Our <span>Impact</span></h2>
-                <p class="impact-intro">
-                    Lawn and Leaf isn't just a business — we are a <strong>youth-driven movement</strong> tackling unemployment while giving back to our community.
-                </p>
-            </div>
-
-            <div class="impact-grid">
-                <div class="impact-card fade-in">
-                    <div class="impact-icon-wrap"><i class="fas fa-briefcase"></i></div>
-                    <h3>Youth Employment</h3>
-                    <p>We hire and train unemployed youth (18–35) from Ennerdale and Lenasia — creating sustainable, dignified work.</p>
-                </div>
-                <div class="impact-card fade-in">
-                    <div class="impact-icon-wrap"><i class="fas fa-graduation-cap"></i></div>
-                    <h3>Skills Development</h3>
-                    <p>Every team member receives training in horticulture, irrigation, and small-business skills they keep for life.</p>
-                </div>
-                <div class="impact-card fade-in">
-                    <div class="impact-icon-wrap"><i class="fas fa-heart"></i></div>
-                    <h3>Elderly Support</h3>
-                    <p>We offer free or discounted garden services to pensioners and disabled community members.</p>
-                </div>
-                <div class="impact-card fade-in">
-                    <div class="impact-icon-wrap"><i class="fas fa-seedling"></i></div>
-                    <h3>Food Gardens</h3>
-                    <p>We donate 5% of our profits toward establishing food gardens at local schools and churches.</p>
-                </div>
-            </div>
-
-            <div class="impact-impact-bar fade-in">
-                <div class="impact-stat">
-                    <span class="impact-number" data-target="15">0</span>
-                    <span class="impact-label">Youth to be Employed</span>
-                </div>
-                <div class="impact-stat">
-                    <span class="impact-number" data-target="50">0</span>
-                    <span class="impact-label">Gardens Revived</span>
-                </div>
-                <div class="impact-stat">
-                    <span class="impact-number" data-target="5">0</span>
-                    <span class="impact-label">Community Food Gardens</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Gallery Section (Now Clickable to Expand) -->
-    <section id="gallery">
-        <div class="container">
-            <h2 class="section-title">Our Work in <span>Action</span></h2>
-            <p class="section-subtitle">Real projects, real results — click any image to expand.</p>
-
-            <div class="portfolio-grid">
-                <div class="portfolio-item fade-in">
-                    <!-- Added target="_blank" to open image full screen -->
-                    <a href="images/rubble-removal.jpg" target="_blank">
-                        <img src="images/rubble-removal.jpg" alt="Rubble Removal" loading="lazy" />
-                    </a>
-                    <div class="portfolio-caption">
-                        <h3>Rubble Removal</h3>
-                        <p>Site clearance & rubble disposal</p>
-                    </div>
-                </div>
-
-                <div class="portfolio-item fade-in">
-                    <a href="images/sod-delivery.jpg" target="_blank">
-                        <img src="images/sod-delivery.jpg" alt="Sod Delivery" loading="lazy" />
-                    </a>
-                    <div class="portfolio-caption">
-                        <h3>Sod Delivery</h3>
-                        <p>Fresh turf delivered to site</p>
-                    </div>
-                </div>
-
-                <div class="portfolio-item fade-in">
-                    <a href="images/soil-sand.jpg" target="_blank">
-                        <img src="images/soil-sand.jpg" alt="Soil & Sand Delivery" loading="lazy" />
-                    </a>
-                    <div class="portfolio-caption">
-                        <h3>Soil & Sand Delivery</h3>
-                        <p>Quality topsoil by the cubic meter</p>
-                    </div>
-                </div>
-
-                <div class="portfolio-item fade-in">
-                    <a href="images/sod-installation.jpg" target="_blank">
-                        <img src="images/sod-installation.jpg" alt="Sod Installation" loading="lazy" />
-                    </a>
-                    <div class="portfolio-caption">
-                        <h3>Sod Installation</h3>
-                        <p>Courtyard turf laying</p>
-                    </div>
-                </div>
-
-                <div class="portfolio-item fade-in">
-                    <a href="images/paving-turf.jpg" target="_blank">
-                        <img src="images/paving-turf.jpg" alt="Paving & Turf Combo" loading="lazy" />
-                    </a>
-                    <div class="portfolio-caption">
-                        <h3>Paving & Turf</h3>
-                        <p>Complete garden combination</p>
-                    </div>
-                </div>
-
-                <div class="portfolio-item fade-in">
-                    <a href="images/sod-delivery-2.jpg" target="_blank">
-                        <img src="images/sod-delivery-2.jpg" alt="Sod Delivery 2" loading="lazy" />
-                    </a>
-                    <div class="portfolio-caption">
-                        <h3>Sod Delivery</h3>
-                        <p>On-site sod transportation</p>
-                    </div>
-                </div>
-
-                <div class="portfolio-item fade-in">
-                    <a href="images/firepit-garden.jpg" target="_blank">
-                        <img src="images/firepit-garden.jpg" alt="Fire Pit Garden" loading="lazy" />
-                    </a>
-                    <div class="portfolio-caption">
-                        <h3>Garden Design</h3>
-                        <p>Fire pit entertainment area</p>
-                    </div>
-                </div>
-
-                <div class="portfolio-item fade-in">
-                    <a href="images/stone-water-feature.jpg" target="_blank">
-                        <img src="images/stone-water-feature.jpg" alt="Stone Wall & Water Feature" loading="lazy" />
-                    </a>
-                    <div class="portfolio-caption">
-                        <h3>Water Feature</h3>
-                        <p>Stone wall & fountain installation</p>
-                    </div>
-                </div>
-
-                <div class="portfolio-item fade-in">
-                    <a href="images/curved-garden.jpg" target="_blank">
-                        <img src="images/curved-garden.jpg" alt="Curved Brick Garden" loading="lazy" />
-                    </a>
-                    <div class="portfolio-caption">
-                        <h3>Garden Design</h3>
-                        <p>Curved brick planter & gravel</p>
-                    </div>
-                </div>
-
-                <div class="portfolio-item fade-in">
-                    <a href="images/modern-courtyard.jpg" target="_blank">
-                        <img src="images/modern-courtyard.jpg" alt="Modern Courtyard" loading="lazy" />
-                    </a>
-                    <div class="portfolio-caption">
-                        <h3>Courtyard Landscaping</h3>
-                        <p>Modern courtyard with stone wall</p>
-                    </div>
-                </div>
-
-                <div class="portfolio-item fade-in">
-                    <a href="images/gravel-firebowl.jpg" target="_blank">
-                        <img src="images/gravel-firebowl.jpg" alt="Gravel Garden with Fire Bowl" loading="lazy" />
-                    </a>
-                    <div class="portfolio-caption">
-                        <h3>Garden Design</h3>
-                        <p>Gravel garden with fire bowl</p>
-                    </div>
-                </div>
-
-                <div class="portfolio-item fade-in">
-                    <a href="images/stone-pathway.jpg" target="_blank">
-                        <img src="images/stone-pathway.jpg" alt="Stone Pathway Garden" loading="lazy" />
-                    </a>
-                    <div class="portfolio-caption">
-                        <h3>Paving & Landscaping</h3>
-                        <p>Stone pathway & flower beds</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="portfolio-cta">
-                <p>Want a garden like these? Get your free quote today.</p>
-                <a href="#contact" class="btn-primary">Get a Free Quote</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Calculator Section -->
-    <section id="calculator">
-        <div class="container">
-            <h2 class="section-title">Instant <span>Estimate</span></h2>
-            <p class="section-subtitle">Get a ballpark price for our most popular services. <strong>We offer over 21 services in total!</strong> For a custom quote on anything else, <a href="#contact" style="color: var(--brand-gold); font-weight: bold; text-decoration: underline;">contact us here</a>.</p>
-
-            <div class="calculator-wrapper fade-in">
-                <div class="calc-form">
-                    <div class="form-group">
-                        <label for="calc-size">Garden Size</label>
-                        <select id="calc-size">
-                            <option value="350">Small (under 200 m²)</option>
-                            <option value="650" selected>Medium (200 – 500 m²)</option>
-                            <option value="1100">Large (500 – 1000 m²)</option>
-                            <option value="1800">Estate / Commercial (1000+ m²)</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="calc-service">Service Type</label>
-                        <select id="calc-service">
-                            <option value="1">Lawn Mowing</option>
-                            <option value="1.4">Hedge Trimming</option>
-                            <option value="1.6">Tree Felling</option>
-                            <option value="2.2">Garden Design</option>
-                            <option value="1.8">Irrigation</option>
-                            <option value="2.0">Sod / Turf</option>
-                            <option value="1.6">Rubble Removal</option>
-                            <option value="1.7">Site Clearance</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="calc-frequency">Frequency</label>
-                        <select id="calc-frequency">
-                            <option value="1.3">Once-off</option>
-                            <option value="1.0" selected>Monthly (Cost per visit)</option>
-                            <option value="0.85">Weekly (Cost per visit)</option>
-                        </select>
-                    </div>
-                </div>
-
-                <div class="calc-result">
-                    <p class="calc-label">Estimated Price</p>
-                    <p class="calc-price">R <span id="calc-output">845</span></p>
-                    <p class="calc-note">Ballpark range only. Final price confirmed on-site.</p>
-                    <a href="#contact" class="btn-primary">Book Site Visit →</a>
-                    <a href="https://wa.me/27692118336?text=Hi%20Lawn%20and%20Leaf%2C%20I%27d%20like%20a%20quote" target="_blank" class="btn-whatsapp-inline">
-                        <i class="fab fa-whatsapp"></i> Chat on WhatsApp
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ Section -->
-    <section id="faq">
-        <div class="container">
-            <h2 class="section-title">Frequently <span>Asked</span></h2>
-            <div class="faq-list">
-                <div class="faq-item fade-in">
-                    <button class="faq-question">
-                        Do you handle water restrictions?
-                        <i class="fas fa-plus"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Yes. Municipal water restrictions make it hard to maintain a garden. We use water-wise design, drip irrigation, boreholes, and mulch layering to ensure your garden thrives on minimal water.</p>
-                    </div>
-                </div>
-                <div class="faq-item fade-in">
-                    <button class="faq-question">
-                        I don't have time for maintenance. Can you help?
-                        <i class="fas fa-plus"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Absolutely. We offer affordable monthly and weekly maintenance plans. We handle the mowing, pruning, and weeding so you can focus on what matters.</p>
-                    </div>
-                </div>
-                <div class="faq-item fade-in">
-                    <button class="faq-question">
-                        Are you compliant for HOA & Estates?
-                        <i class="fas fa-plus"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Yes. We provide reliable commercial contracts for estates and HOAs, ensuring safety compliance and reporting to keep your community beautiful and fine-free.</p>
-                    </div>
-                </div>
-                <div class="faq-item fade-in">
-                    <button class="faq-question">
-                        What areas do you service?
-                        <i class="fas fa-plus"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>We're based in <strong>Ennerdale</strong> with an office in <strong>Lenasia</strong>, serving the entire Greater Gauteng region — including Johannesburg South, Soweto, Sedibeng, the <strong>Vaal Triangle</strong>, and surrounding areas.</p>
-                    </div>
-                </div>
-                <div class="faq-item fade-in">
-                    <button class="faq-question">
-                        Do you do community volunteer work?
-                        <i class="fas fa-plus"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Yes! We regularly volunteer our time for free garden clean-ups at churches, schools, and community centres. If you have a community project you'd like our help with, <a href="#contact">get in touch</a>.</p>
-                    </div>
-                </div>
-                <div class="faq-item fade-in">
-                    <button class="faq-question">
-                        Are you insured?
-                        <i class="fas fa-plus"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Yes, Lawn and Leaf is fully insured and licensed. We also comply with all South African labor laws and safety regulations.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact">
-        <div class="container">
-            <h2 class="section-title">Get a <span>Free Quote</span></h2>
-            <p class="section-subtitle">Fill in the form below and we'll get back to you within 24 hours.</p>
-
-            <div class="contact-wrapper fade-in">
-                <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
-                    <input type="hidden" name="access_key" value="36a8b298-edb2-4e28-834c-63ffa23e8ec4">
-
-                    <div class="form-group">
-                        <label for="name">Full Name</label>
-                        <input type="text" id="name" name="name" placeholder="Your name" required />
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email Address</label>
-                        <input type="email" id="email" name="email" placeholder="you@example.com" required />
-                    </div>
-                    <div class="form-group">
-                        <label for="phone">Phone / WhatsApp (Optional)</label>
-                        <input type="tel" id="phone" name="phone" placeholder="+27 69 211 8336" />
-                    </div>
-                    <div class="form-group">
-                        <label for="service">Service Interested In</label>
-                        <select id="service" name="service">
-                            <option>Lawn Mowing</option>
-                            <option>Hedge Trimming</option>
-                            <option>Tree Felling</option>
-                            <option>Garden Design</option>
-                            <option>Irrigation</option>
-                            <option>Sod / Turf</option>
-                            <option>Rubble Removal</option>
-                            <option>Site Clearance</option>
-                            <option>Community / Volunteer Project</option>
-                            <option>Other (See our full list of 21+ services)</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Project Details</label>
-                        <textarea id="message" name="message" rows="4" placeholder="Tell us about your garden..." maxlength="500"></textarea>
-                        <small id="char-count">0 / 500</small>
-                    </div>
-                    <input type="text" name="_gotcha" style="display:none" />
-                    <div class="h-captcha" data-captcha="true"></div>
-                    <button type="submit" class="btn-primary">Send Message</button>
-                </form>
-
-                <div class="contact-info">
-                    <h3>Contact Details</h3>
-                    <p><i class="fas fa-phone-alt"></i> <a href="tel:+27692118336">+27 69 211 8336</a></p>
-                    <p><i class="fas fa-envelope"></i> <a href="mailto:lawnandleafgardeningservices@gmail.com">lawnandleafgardeningservices@gmail.com</a></p>
-                    <p><i class="fas fa-map-marker-alt"></i> <strong>Base:</strong> Ennerdale, Gauteng <br>
-                       <span style="padding-left:40px;"><strong>Office:</strong> Lenasia, Gauteng</span></p>
-                    <p><i class="fas fa-clock"></i> Mon–Sat: 07:00 – 17:00</p>
-
-                    <div class="social-links">
-                        <a href="https://www.facebook.com/GandMgardeningservices" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="https://wa.me/27692118336" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="map-wrapper fade-in">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14319.885542353534!2d27.8255!3d-26.3255!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e95a0f3b6c1a4d7%3A0x9d2c5d77f2a24f1!2sLenasia%2C%20Gauteng!5e0!3m2!1sen!2sza!4v1700000000000!5m2!1sen!2sza"
-                    width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
-            </div>
         </div>
     </section>
 
@@ -530,18 +122,8 @@
         </div>
     </footer>
 
-    <button id="back-to-top" aria-label="Back to top">
-        <i class="fas fa-chevron-up"></i>
-    </button>
-
-    <a href="https://wa.me/27692118336?text=Hi%20Lawn%20and%20Leaf%2C%20I%27d%20like%20a%20quote%20for%20my%20garden"
-       target="_blank"
-       class="whatsapp-float"
-       aria-label="Chat on WhatsApp">
-        <i class="fab fa-whatsapp"></i>
-        <span class="whatsapp-tooltip">Chat with us</span>
-    </a>
-
+    <button id="back-to-top"><i class="fas fa-chevron-up"></i></button>
+    <a href="https://wa.me/27692118336" target="_blank" class="whatsapp-float"><i class="fab fa-whatsapp"></i></a>
     <script src="script.js"></script>
 </body>
 </html>
